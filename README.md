@@ -21,7 +21,6 @@ Install these dependencies:
 yarn add @solana/wallet-adapter-base \
          @solana/wallet-adapter-react \
          @solana/wallet-adapter-react-ui \
-         @solana/wallet-adapter-wallets \
          @nekoproject/wallet-adapter-neko \
          @solana/web3.js \
          react
