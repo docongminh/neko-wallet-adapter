@@ -1,13 +1,10 @@
 import { WalletAdapterNetwork } from '@solana/wallet-adapter-base';
 import { ConnectionProvider, WalletProvider } from '@solana/wallet-adapter-react';
 import { WalletModalProvider, WalletMultiButton } from '@solana/wallet-adapter-react-ui';
-import {
-    PhantomWalletAdapter,
-    Coin98WalletAdapter
-} from '@solana/wallet-adapter-wallets';
+import { PhantomWalletAdapter, Coin98WalletAdapter } from '@solana/wallet-adapter-wallets';
 // @ts-ignore
-import {NekoWalletAdapter} from '../lib/esm/adapter'
-// import {NekoWalletAdapter} from '@nekoproject/wallet-adapter-neko'
+// import {NekoWalletAdapter} from '../lib/esm/adapter'
+import { NekoWalletAdapter } from '@nekoproject/wallet-adapter-neko';
 import { clusterApiUrl } from '@solana/web3.js';
 import React, { FC, ReactNode, useMemo } from 'react';
 
@@ -30,11 +27,7 @@ const Context: FC<{ children: ReactNode }> = ({ children }) => {
     // Only the wallets you configure here will be compiled into your application, and only the dependencies
     // of wallets that your users connect to will be loaded.
     const wallets = useMemo(
-        () => [
-            new PhantomWalletAdapter(),
-            new NekoWalletAdapter(),
-            new Coin98WalletAdapter()
-        ],
+        () => [new PhantomWalletAdapter(), new NekoWalletAdapter(), new Coin98WalletAdapter()],
         [network]
     );
 
