@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "outDir": "react-ui-demo/lib/esm",
+    "declaration": true,
+    "declarationDir": "react-ui-demo/lib/types",
+    "noEmit": false,
+    "target": "es2019",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "noEmitOnError": true,
+    "stripInternal": true,
+    "jsx": "react",
+    "strict": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "typeRoots": ["node_modules/@types"]
+  },
+  "exclude": ["node_modules"],
+  "include": ["src"]
+}

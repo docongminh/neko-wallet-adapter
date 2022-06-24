@@ -1,0 +1,46 @@
+{
+    "name": "@nekoproject/wallet-adapter-neko",
+    "version": "0.1.0",
+    "author": "@minhdocs",
+    "repository": "https://github.com/docongminh/neko-wallet-adapter",
+    "license": "Apache-2.0",
+    "type": "module",
+    "sideEffects": false,
+    "main": "lib/cjs/index.js",
+    "module": "lib/esm/index.mjs",
+    "types": "lib/types/index.d.ts",
+    "exports": {
+        "import": "./lib/esm/index.mjs",
+        "require": "./lib/cjs/index.js"
+    },
+    "files": [
+        "lib",
+        "src",
+        "LICENSE"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "clean": "shx rm -rf lib/*",
+        "publish": "npm publish --access public",
+        "build": "npm run clean && tsc -p tsconfig.json && tsc-esm -p tsconfig.json && tsc -p tsconfig.cjs.json",
+        "postbuild": "echo '{\"type\":\"commonjs\"}' | npx json > lib/cjs/package.json && echo '{\"type\":\"module\"} ' | npx json > lib/esm/package.json"
+    },
+    "peerDependencies": {
+        "@solana/web3.js": "^1.36.0"
+    },
+    "dependencies": {
+        "@solana/wallet-adapter-base": "^0.9.4"
+    },
+    "devDependencies": {
+        "@solana/web3.js": "^1.36.0",
+        "@types/node-fetch": "^2.6.2",
+        "shx": "^0.3.3",
+        "tsc-esm": "^1.0.4",
+        "tslib": "^2.3.0",
+        "typedoc": "^0.22.13",
+        "typescript": "^4.6.2",
+        "typescript-esm": "^2.0.0"
+    }
+}
