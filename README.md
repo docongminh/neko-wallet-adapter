@@ -18,14 +18,16 @@ Modular **Neko Wallet Adapters** and components for Solana applications.
 Install these dependencies:
 
 ```shell
-yarn add @solana/wallet-adapter-base \
+npm install @solana/wallet-adapter-base \
          @solana/wallet-adapter-react \
          @solana/wallet-adapter-react-ui \
-         @nekoproject/wallet-adapter-neko \
          @solana/web3.js \
          react
 ```
-
+Install neko wallet adapter
+``` bash
+    npm install @nekoproject/wallet-adapter-neko
+```
 ### Setup
 
 ```tsx
